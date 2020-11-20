@@ -9,4 +9,12 @@ public class AopServiceImpl implements AopService{
         System.out.println("AopMethod() 실행!!");
         return "AOP!";
     }
+    @Override
+    public String abcMethod(){
+        String string = null;
+
+        string.charAt(0);
+
+        return "dd";
+    }
 }

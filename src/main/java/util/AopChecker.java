@@ -40,7 +40,7 @@ public class AopChecker {
         System.out.println("====================");
     }
     @AfterThrowing(value = "execution(* service.AopServiceImpl.*(..))", throwing = "thr")
-    public void afterThrowingMethod(JoinPoint joinPoint, SQLException thr){
+    public void afterThrowingMethod(JoinPoint joinPoint, Exception thr){
         System.out.println("===AfterThrowing===");
         System.out.println("전달된 메서드 : " + joinPoint.getSignature().toShortString());
         System.out.println("에러명 : " + thr);
